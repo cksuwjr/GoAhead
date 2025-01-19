@@ -8,8 +8,8 @@ public class PlayerMove : MonoBehaviour, IMovable
     private float speed = 5f;
     
     private Vector3 moveDelta;
-    private Vector3 minAreaXZ = new Vector3(-5f, 0, 1f);
-    private Vector3 maxAreaXZ = new Vector3(5f, 0, 10f);
+    private Vector3 minAreaXZ = new Vector3(-4.5f, 0, 4f);
+    private Vector3 maxAreaXZ = new Vector3(4.5f, 0, 12f);
 
     public void SetAct(bool act)
     {

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private PlayerControllerr playerController;
     private ScrollManager scrollManager;
+    private MonsterSpawnManager monsterSpawnManager;
 
     IInputHandle inputHandle;
 
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player")?.TryGetComponent<PlayerControllerr>(out playerController);
         GameObject.Find("ScrollManager")?.TryGetComponent<ScrollManager>(out scrollManager);
+        GameObject.Find("MonsterSpawnManager")?.TryGetComponent<MonsterSpawnManager>(out monsterSpawnManager);
 
         inputHandle = GetComponent<KeyBoardInputHandle>();
     }
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         scrollManager?.SetScrollSpeed(4f);
         playerController?.GameStart();
+        monsterSpawnManager?.InitSpawnManager();
         yield return null;
     }
 }

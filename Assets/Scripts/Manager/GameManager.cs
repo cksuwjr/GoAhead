@@ -8,11 +8,21 @@ public class GameManager : MonoBehaviour
     private ScrollManager scrollManager;
     private MonsterSpawnManager monsterSpawnManager;
 
-    IInputHandle inputHandle;
+    private IInputHandle inputHandle;
+
+
+    private static GameManager instance;
+
+    public static GameManager Instance => instance;
+
+    public GameObject player;
 
     private void Awake()
     {
-        GameObject.FindGameObjectWithTag("Player")?.TryGetComponent<PlayerControllerr>(out playerController);
+        if (instance != null) Destroy(gameObject); else instance = this;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        player?.TryGetComponent<PlayerControllerr>(out playerController);
         GameObject.Find("ScrollManager")?.TryGetComponent<ScrollManager>(out scrollManager);
         GameObject.Find("MonsterSpawnManager")?.TryGetComponent<MonsterSpawnManager>(out monsterSpawnManager);
 

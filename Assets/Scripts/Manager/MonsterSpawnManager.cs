@@ -22,6 +22,7 @@ public class MonsterSpawnManager : MonoBehaviour
         {
             mob.SetSpeed(4f);
             mob.SetAct(true);
+            mob.InitMonster();
         }
     }
 

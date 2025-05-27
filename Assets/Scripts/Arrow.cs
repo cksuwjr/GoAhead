@@ -37,7 +37,7 @@ public class Arrow : PoolObject, IMovable
 
         SetAct(true);
 
-        Invoke("DissappearNaturaly", 3f);
+        Invoke("DissappearNaturaly", 1.25f);
     }
 
     private void Update()

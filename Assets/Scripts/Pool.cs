@@ -7,9 +7,14 @@ public class Pool : MonoBehaviour
 
     [SerializeField] private PoolObject poolObjectPrefab;
 
-    [SerializeField] private int poolCount = 5;
+    [SerializeField] private int poolCount = 15;
 
     private Queue<PoolObject> poolObjects = new Queue<PoolObject>();
+
+    private void Awake()
+    {
+        Allocate();
+    }
 
     private void Allocate()
     {

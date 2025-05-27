@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour, IMovable
     
     private Vector3 moveDelta;
     private Vector3 minAreaXZ = new Vector3(-4.5f, 0, 4f);
-    private Vector3 maxAreaXZ = new Vector3(4.5f, 0, 12f);
+    private Vector3 maxAreaXZ = new Vector3(4.5f, 0, 18f);
 
     public void SetAct(bool act)
     {

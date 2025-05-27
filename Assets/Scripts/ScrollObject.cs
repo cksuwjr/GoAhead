@@ -13,8 +13,8 @@ public interface IScrollObject
 public class ScrollObject : MonoBehaviour, IScrollObject
 {
     private float scrollSpeed = 0f;
-    private Vector3 startPos = new Vector3(-7.5f, 0, 50f);
-    private float resetPosZ = -50f;
+    private Vector3 startPos = new Vector3(0, 0, 75f);
+    private float resetPosZ = -25f;
 
     public void ResetPosition()
     {
